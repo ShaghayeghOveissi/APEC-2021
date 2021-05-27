@@ -103,6 +103,7 @@ export default {
 
     @media (min-width: 768px) {
       margin-left: 2.5em;
+      margin-top: 2em;
     }
 }
 

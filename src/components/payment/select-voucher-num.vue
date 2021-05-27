@@ -23,7 +23,7 @@
     <strong class="mt-5 mb-3">Total price:</strong>
     <p>
       <strong class="font-size-lg">${{totalPrice}}</strong>
-      <span class="highlighted-text" v-if="discountPlaceholder"><b> (You are saving $3.00)</b></span>
+      <span class="highlighted-text" v-if="discountPlaceholder !== 'Discount Code'"><b> (You are saving $3.00)</b></span>
     </p>
     <button type="button" @click="modalBtnClicked()" class="form-container__btn btn btn-primary">Continue</button>
   </div>
