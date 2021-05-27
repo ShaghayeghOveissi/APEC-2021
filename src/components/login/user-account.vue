@@ -70,7 +70,8 @@ export default {
 
   async created() {
     const userRes = await fetch("user.json");
-    const user = JSON.parse(localStorage.getItem('newUserObject')) ? JSON.parse(localStorage.getItem('newUserObject')) : await userRes.json();
+    const userDetailsFromJson = await userRes.json();
+    const user = localStorage.getItem('newUserObject') ? JSON.parse(localStorage.getItem('newUserObject')) : userDetailsFromJson[0];
     this.userInitial = `${user.firstName.charAt(0)}${user.lastName.charAt(0)}`;
     this.userEmail = user.email;
     this.userFirstName = user.firstName;

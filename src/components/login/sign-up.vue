@@ -118,7 +118,7 @@
         if (this.confirmPasswordInput !== this.passwordInput) {
           this.signUpError = "Passwords do not match.";
         } else {
-          const newUserObject = {firstName: this.firstNameInput, lastName: this.lastNameInput, email: this.emailInput, password: this.passwordInput, location: "Eltham, 3095", city: "Melbourne, 3000"};
+          const newUserObject = {firstName: this.firstNameInput, lastName: this.lastNameInput, email: this.emailInput, password: this.passwordInput, location: "Burwood, 3125", city: "Melbourne, 3000"};
           localStorage.setItem('newUserObject', JSON.stringify(newUserObject));
           localStorage.userName = this.firstNameInput;
           window.location.href = "/explore-splash-page";

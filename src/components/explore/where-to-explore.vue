@@ -168,6 +168,7 @@ export default {
   @media (min-width: 768px) {
     position: unset !important;
     transform: inherit !important;
+    width: 50% !important;
   }
 }
 </style>

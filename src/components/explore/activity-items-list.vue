@@ -328,6 +328,10 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  @media (min-width: 1200px) {
+    min-height: 428px;
+  }
 }
 
 .activity-item__top-container-text {
