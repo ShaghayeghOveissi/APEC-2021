@@ -31,7 +31,7 @@ export default {
   methods: {
     async getNotificationsRecords() {
       this.loading = true;
-      const res = await fetch("APEC-2021/notifications.json");
+      const res = await fetch("notifications.json");
       const items = await res.json();
       if (localStorage.ratingDetails) {
         if (localStorage.purchasedActivity) {

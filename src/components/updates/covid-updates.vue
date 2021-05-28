@@ -82,7 +82,7 @@ export default {
   methods: {
     async getStateUpdatesRecords() {
       this.loading = true;
-      const res = await fetch("APEC-2021/states.json");
+      const res = await fetch("states.json");
       this.filterItems = await res.json();
       this.filterSelected = this.filterItems[0].id;
       this.selectedStateData = this.filterItems[0];

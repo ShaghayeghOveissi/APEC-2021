@@ -120,7 +120,7 @@ export default {
     },
 
     async fetchUserDetails () {
-      const userRes = await fetch("APEC-2021/user.json");
+      const userRes = await fetch("user.json");
       this.user = await userRes.json();
     },
 
@@ -136,7 +136,7 @@ export default {
   async created() {
     //TODO: Add try catch error
     this.fetchUserDetails();
-    const res = await fetch("APEC-2021/travelRestrictions.json");
+    const res = await fetch("travelRestrictions.json");
     const restrictions = await res.json();
 
     this.travelRestrictionLimit = restrictions[0].travelLimitDistance;

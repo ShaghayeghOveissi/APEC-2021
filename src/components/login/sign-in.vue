@@ -73,7 +73,7 @@
         return false;
       },
       async fetchUserDetails () {
-        const userRes = await fetch("APEC-2021/user.json");
+        const userRes = await fetch("user.json");
         this.user = await userRes.json();
       }
     },
