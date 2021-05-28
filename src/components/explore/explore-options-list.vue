@@ -42,7 +42,7 @@ export default {
   methods: {
     async getRecords() {
       //TODO: Add try catch error
-      const res = await fetch("exploreoptions.json");
+      const res = await fetch("APEC-2021/exploreoptions.json");
       this.cards = await res.json();
     },
 

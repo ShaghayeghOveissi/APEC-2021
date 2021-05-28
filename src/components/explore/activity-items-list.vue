@@ -126,7 +126,7 @@ export default {
   methods: {
     async getRecords() {
       this.loading = true;
-      const res = await fetch("activities.json");
+      const res = await fetch("APEC-2021/activities.json");
       if (this.isVoucher) {
         const allActivities = await res.json();
         this.activities = allActivities.filter(item => item.purchased && !item.used);
@@ -163,7 +163,7 @@ export default {
     async filterItemsByType(id) {
       this.filtertypeSelected = id;
       this.loading = true;
-      const res = await fetch("activities.json");
+      const res = await fetch("APEC-2021/activities.json");
       this.activities = await res.json();
 
       this.addPurchasedItemToList();
@@ -186,7 +186,7 @@ export default {
 
     async filterItemsByDistance(distance) {
       this.loading = true;
-      const res = await fetch("activities.json");
+      const res = await fetch("APEC-2021/activities.json");
       this.activities = await res.json();
 
       if (distance !== 'No limit') {
@@ -211,7 +211,7 @@ export default {
   },
 
   async created() {
-    const res = await fetch("travelRestrictions.json");
+    const res = await fetch("APEC-2021/travelRestrictions.json");
     const restrictions = await res.json();
     this.travelRestrictionsLimit = restrictions[0].travelLimitDistance;
     localStorage.travelRestrictionsLimit = this.travelRestrictionsLimit;

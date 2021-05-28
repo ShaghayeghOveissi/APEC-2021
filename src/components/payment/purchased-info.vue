@@ -93,7 +93,7 @@ export default {
   },
 
   async created() {
-    const res = await fetch("travelRestrictions.json");
+    const res = await fetch("APEC-2021/travelRestrictions.json");
     const restrictions = await res.json();
     this.travelRestrictionsLimit = restrictions[0].travelLimitDistance;
     localStorage.travelRestrictionsLimit = this.travelRestrictionsLimit;

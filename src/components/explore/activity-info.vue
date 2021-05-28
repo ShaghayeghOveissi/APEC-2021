@@ -178,7 +178,7 @@ export default {
       this.showModal = !this.showModal;
     },
     async getUserInitial() {
-      const userRes = await fetch("user.json");
+      const userRes = await fetch("APEC-2021/user.json");
       const user = JSON.parse(localStorage.getItem('newUserObject')) ? JSON.parse(localStorage.getItem('newUserObject')) : await userRes.json();
       this.userInitial = `${user.firstName.charAt(0)}${user.lastName.charAt(0)}`;
     }
@@ -186,7 +186,7 @@ export default {
 
   async created() {
     this.getUserInitial();
-    const res = await fetch("activities.json");
+    const res = await fetch("APEC-2021/activities.json");
     const activitiesList = await res.json();
 
     this.selectedActivity = activitiesList.find((item) => item.id === parseInt(this.$route.query.id));

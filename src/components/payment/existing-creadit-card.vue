@@ -87,7 +87,7 @@ export default {
   
     async purchase() {
       this.loading = true;
-      const res = await fetch("activities.json");
+      const res = await fetch("APEC-2021/activities.json");
       const activitiesList = await res.json();
       const activity = activitiesList.find((item) => item.id === parseInt(this.$route.query.id));
       activity.purchased = true;
